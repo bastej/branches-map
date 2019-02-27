@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Webpack and nodejs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- MAPA -->
+    <div id="map" class="placowki-mapa"></div>
+
+    <!-- FILTERS -->
+    <div class="placowki-filters">
+      <div class="container container-content-1260">
+        <div class="row">
+          <div class="col-12">
+            <div class="placowki-filters__wrapper" data-slide="false">
+              <!-- <a class="slideForm"><i class="fa fa-angle-down"></i></a> -->
+              <div class="placowki-filters__select">
+                <h1>Znajdź placówkę</h1>
+                <form id="form" class="form-inline" novalidate>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <input
+                          class="searchStreetField form-control"
+                          type="text"
+                          name="street"
+                          id="street"
+                          placeholder="Ulica"
+                        />
+                      </div>
+                      <div class="col-3">
+                        <input
+                          class="searchCityField form-control"
+                          type="text"
+                          name="city"
+                          id="city"
+                          placeholder="Miasto"
+                          data-error-message="Podaj (poprawną) nazwę miasta"
+                          required
+                          autofocus="autofocus"
+                        />
+                        <label class="error"></label>
+                      </div>
+                      <div class="col-3">
+                        <input
+                          class="searchZipcodeField form-control"
+                          type="text"
+                          name="zipcode"
+                          id="zipcode"
+                          placeholder="Kod pocztowy"
+                          data-error-message="Podaj (poprawny) kod pocztowy"
+                          pattern="[0-9]{2}-[0-9]{3}"
+                        />
+                        <label class="error"></label>
+                      </div>
+                      <div class="col-3">
+                        <select
+                          class="rangeField form-control"
+                          type="number"
+                          id="rangeField"
+                        >
+                          <option value="5">Zakres wyszukiwania: 5 km</option>
+                          <option value="15">Zakres wyszukiwania: 15 km</option>
+                          <option value="30">Zakres wyszukiwania: 30 km</option>
+                          <option value="100"
+                            >Zakres wyszukiwania: 100 km</option
+                          >
+                          <option value="999999999"
+                            >Wszystkie lokalizacje
+                          </option>
+                        </select>
+                      </div>
+
+                      <div class="col-12">
+                        <button class="btn btn-red--border" type="submit">
+                          Szukaj<i class="fa fa-long-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div class="placowki-list">
+      <div class="container container-content-1260">
+        <div class="row">
+          <div class="col-12">
+            <div class="placowki-list__wrapper">
+              <div class="row row-headBar">
+                <div class="col-6">
+                  <h2 id="itemOutputHeader">
+                    Wszystkie oddziały<span id="itemCount"></span>:
+                  </h2>
+                </div>
+                <div class="col-6 text-right">
+                  <button class="btn btn-red--border row-headBar__btn-pdf">
+                    Pobierz PDF<i class="fa fa-download"></i>
+                  </button>
+                  <button
+                    class="btn row-headBar__btn-toggle-view"
+                    id="btn-toggle-view"
+                    data-active="false"
+                  >
+                    <i class="fa fa-th-list"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="datafetch" class="row row-results">
+                <div class="lds-dual-ring"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
