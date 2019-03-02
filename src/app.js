@@ -15,6 +15,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs
 import { branches } from "./js/branches.js";
 // import lazyLoadScript from "./js/lazyLoader.js";
 
+import "./favicon.ico"
 import clock from "./img/icon_clock.png";
 import info from "./img/icon_info.png";
 import locationIc from "./img/icon_location.png";

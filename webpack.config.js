@@ -17,9 +17,13 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.(gif|png|jpe?g|svg)$/i,
+      //   use: ["file-loader"]
+      // },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: ["file-loader"]
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: 'file-loader?name=[name].[ext]'  // <-- retain original file name
       },
       {
         test: /\.js$/,
