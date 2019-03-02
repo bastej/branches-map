@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: "./src/js/app.js"
+    app: "./src/app.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -31,29 +31,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.html$/,
-        use: ["html-loader"]
-      },
-      {
-        test: /\.css$/, // wyr reg,
-        use: [
-          "style-loader",
-          "css-loader" // tutaj webpack bierz eod końca, czyli napierw załaduje css-loader potem style-loader
-        ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]"
-            }
-          }
-        ],
-        exclude: path.resolve(__dirname, "./src/index.html")
       },
       {
         test: /\.(scss)$/,

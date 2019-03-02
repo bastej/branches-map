@@ -2,7 +2,7 @@
   "name": "googlemap_js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode production",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@google/markerclusterer": "^1.0.3",
     "autoprefixer": "^9.4.9",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
@@ -25,6 +26,8 @@
     "image-webpack-loader": "^4.6.0",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
+    "pdfmake": "^0.1.53",
+    "popper.js": "^1.14.7",
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",
     "sass-loader": "^7.1.0",

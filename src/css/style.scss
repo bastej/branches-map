@@ -6,7 +6,7 @@
 .placowki-mapa {
   height: 570px;
   width: 100%;
-  background: green;
+  background: #23a136;
   clear: both;
 
   button[title="Close"] {
@@ -70,11 +70,11 @@
           border-color: #23a136;
         }
         &.invalid {
-          border-color: red;
+          border-color: #cc121d;
         }
       }
       .error {
-        color: red;
+        color: #cc121d;
         display: block;
         font-size: 11px;
       }
@@ -91,18 +91,22 @@
         border-radius: 22px;
         border: 2px solid transparent;
         transition: all 500ms ease;
-        background: red;
+        background: #cc121d;
         cursor: pointer;
         i {
           color: #ffffff;
+          margin-left: 10px;
+          transition: all 500ms ease;    
         }
         &:hover {
           border: 2px solid transparent;
-          padding: 12px 30px 14px 44px;
-          background: red;
+          // padding: 12px 30px 14px 44px;
+          color: #fff;
+          background: #cc121d;
           box-shadow: 0px 11px 13px 0px rgba(204, 18, 29, 0.46);
           i {
-            margin-left: 10px;
+            margin-left: 17px;
+            transition: all 500ms ease;
           }
         }
       }
@@ -137,7 +141,7 @@
       border-radius: 5px;
       background-color: rgb(255, 255, 255);
       width: 269px;
-      height: 43px;
+      // height: 43px;
       cursor: pointer;
       background: url("../img/job-filter-input.png") no-repeat 245px center;
 
@@ -158,12 +162,12 @@
       border-radius: 22px;
       border: 2px solid transparent;
       transition: all 500ms ease;
-      background: red;
+      background: #cc121d;
       cursor: pointer;
 
       &:hover {
         padding: 12px 44px 14px 44px;
-        background: red;
+        background: #cc121d;
         box-shadow: 0px 11px 13px 0px rgba(204, 18, 29, 0.46);
       }
     }
@@ -195,7 +199,7 @@
 }
 
 .placowki-list {
-  background: green;
+  background: #23a136;
 
   &__wrapper {
     background: white;
@@ -401,21 +405,21 @@
     }
   }
   &__navigation {
-    background: green;
+    background: #23a136;
     padding-bottom: 65px;
     .wp-pagenavi a {
       background: white;
-      color: green;
+      color: #23a136;
       border: 1px solid transparent;
     }
     .wp-pagenavi span.current {
-      background: green;
+      background: #23a136;
       color: white;
       border: 1px solid white;
     }
     .wp-pagenavi a.nextpostslink i,
     .wp-pagenavi a.previouspostslink i {
-      color: green;
+      color: #23a136;
     }
   }
 

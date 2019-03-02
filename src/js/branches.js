@@ -1,8 +1,8 @@
 export const branches = [
   {
     id: 0,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Legnicka 56 a II pietro Wrocław",
+    rodzaj: "placówka",
+    nazwa: "placówka Legnicka 56 a II pietro Wrocław",
     miasto: "Wrocław",
     ulica: "Legnicka 56 a II pietro",
     kod_pocztowy: "54-204",
@@ -11,12 +11,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505549121",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 1,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Słomińskiego 1A Wrocław",
+    rodzaj: "placówka",
+    nazwa: "placówka Słomińskiego 1A Wrocław",
     miasto: "Wrocław",
     ulica: "Słomińskiego 1A",
     kod_pocztowy: "50-304",
@@ -25,12 +25,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "690-543-690",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 2,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Kazimierza Wielkiego 1 Wrocław",
+    rodzaj: "placówka",
+    nazwa: "placówka Kazimierza Wielkiego 1 Wrocław",
     miasto: "Wrocław",
     ulica: "Kazimierza Wielkiego 1",
     kod_pocztowy: "50-077",
@@ -39,12 +39,12 @@ export const branches = [
     godziny_otwarcia: "pn-pt <b>10:00-18:00<b>",
     tel: "604 214 383;793 651 969",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 3,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Grochowska 306/308 Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Grochowska 306/308 Warszawa",
     miasto: "Warszawa",
     ulica: "Grochowska 306/308",
     kod_pocztowy: "03-840",
@@ -53,12 +53,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "505549625",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 4,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Domaniewska 42/44 Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Domaniewska 42/44 Warszawa",
     miasto: "Warszawa",
     ulica: "Domaniewska 42/44",
     kod_pocztowy: "02-672",
@@ -67,12 +67,12 @@ export const branches = [
     godziny_otwarcia: "10:00-20:00",
     tel: "(22) 319 69 38;",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 5,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Chmielna 85/87 Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Chmielna 85/87 Warszawa",
     miasto: "Warszawa",
     ulica: "Chmielna 85/87",
     kod_pocztowy: "00-805",
@@ -81,12 +81,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "889830927",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 6,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Słomińskiego 7 Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Słomińskiego 7 Warszawa",
     miasto: "Warszawa",
     ulica: "Słomińskiego 7",
     kod_pocztowy: "00-195",
@@ -95,12 +95,12 @@ export const branches = [
     godziny_otwarcia: "10:00-20:00",
     tel: "(22) 530 62 50",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 7,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Skorupki 5, parter Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Skorupki 5, parter Warszawa",
     miasto: "Warszawa",
     ulica: "Skorupki 5, parter",
     kod_pocztowy: "00-546",
@@ -109,12 +109,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "22 891 24 32",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 8,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Senatorska 18A Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Senatorska 18A Warszawa",
     miasto: "Warszawa",
     ulica: "Senatorska 18A",
     kod_pocztowy: "00-082",
@@ -123,12 +123,12 @@ export const branches = [
     godziny_otwarcia: "10:00-20:00",
     tel: "(22) 829 10 20",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 9,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Aleje Jerozolimskie 94 Warszawa",
+    rodzaj: "placówka",
+    nazwa: "placówka Aleje Jerozolimskie 94 Warszawa",
     miasto: "Warszawa",
     ulica: "Aleje Jerozolimskie 94",
     kod_pocztowy: "00 – 807",
@@ -137,12 +137,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "22 395 77 91;",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 10,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Warszawska 4 Toruń",
+    rodzaj: "placówka",
+    nazwa: "placówka Warszawska 4 Toruń",
     miasto: "Toruń",
     ulica: "Warszawska 4",
     kod_pocztowy: "87-100",
@@ -151,12 +151,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "(56) 664 10 10",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 11,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk al. Niepodległości 31 Szczecin",
+    rodzaj: "placówka",
+    nazwa: "placówka al. Niepodległości 31 Szczecin",
     miasto: "Szczecin",
     ulica: "al. Niepodległości 31",
     kod_pocztowy: "70-551",
@@ -165,12 +165,12 @@ export const branches = [
     godziny_otwarcia: "09:00-18:00",
     tel: "505548129",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 12,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Wojska Polskiego 8 Szczecin",
+    rodzaj: "placówka",
+    nazwa: "placówka Wojska Polskiego 8 Szczecin",
     miasto: "Szczecin",
     ulica: "Wojska Polskiego 8",
     kod_pocztowy: "70-471",
@@ -179,12 +179,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "793774343",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "nieruchomości"
   },
   {
     id: 13,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Sienkiewicza 9 Słupsk",
+    rodzaj: "placówka",
+    nazwa: "placówka Sienkiewicza 9 Słupsk",
     miasto: "Słupsk",
     ulica: "Sienkiewicza 9",
     kod_pocztowy: "76-200",
@@ -193,12 +193,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "600 253 149; 600 942 249",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 14,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Słowackiego 2 Rzeszów",
+    rodzaj: "placówka",
+    nazwa: "placówka Słowackiego 2 Rzeszów",
     miasto: "Rzeszów",
     ulica: "Słowackiego 2",
     kod_pocztowy: "35-060",
@@ -207,12 +207,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "(17) 875 15 51",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 15,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Jacka Malczewskiego 24 Radom",
+    rodzaj: "placówka",
+    nazwa: "placówka Jacka Malczewskiego 24 Radom",
     miasto: "Radom",
     ulica: "Jacka Malczewskiego 24",
     kod_pocztowy: "26-609",
@@ -221,12 +221,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505548783",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "nieruchomości"
   },
   {
     id: 16,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Dąbrowskiego 23 Poznań",
+    rodzaj: "placówka",
+    nazwa: "placówka Dąbrowskiego 23 Poznań",
     miasto: "Poznań",
     ulica: "Dąbrowskiego 23",
     kod_pocztowy: "60-840",
@@ -235,12 +235,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "505548979",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 17,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Św. Marcin 40 Poznań",
+    rodzaj: "placówka",
+    nazwa: "placówka Św. Marcin 40 Poznań",
     miasto: "Poznań",
     ulica: "Św. Marcin 40",
     kod_pocztowy: "61-807",
@@ -249,12 +249,12 @@ export const branches = [
     godziny_otwarcia: "10:0-19:00",
     tel: "(61) 858 99 80",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 18,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Głogowska 41 Poznań",
+    rodzaj: "placówka",
+    nazwa: "placówka Głogowska 41 Poznań",
     miasto: "Poznań",
     ulica: "Głogowska 41",
     kod_pocztowy: "60-736",
@@ -263,12 +263,12 @@ export const branches = [
     godziny_otwarcia: "9.30-17:30",
     tel: "505549123",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 19,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Książąt Opolskich 29 Opole",
+    rodzaj: "placówka",
+    nazwa: "placówka Książąt Opolskich 29 Opole",
     miasto: "Opole",
     ulica: "Książąt Opolskich 29",
     kod_pocztowy: "45-005",
@@ -277,12 +277,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "(77) 441 27 13",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 20,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Wilczyńskiego 17/5E Olsztyn",
+    rodzaj: "placówka",
+    nazwa: "placówka Wilczyńskiego 17/5E Olsztyn",
     miasto: "Olsztyn",
     ulica: "Wilczyńskiego 17/5E",
     kod_pocztowy: "10-687",
@@ -291,12 +291,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "(89) 523 67 06",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "nieruchomości"
   },
   {
     id: 21,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Narutowicza 24 Łódź",
+    rodzaj: "placówka",
+    nazwa: "placówka Narutowicza 24 Łódź",
     miasto: "Łódź",
     ulica: "Narutowicza 24",
     kod_pocztowy: "90-135",
@@ -305,12 +305,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "505556686",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 22,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Al. Piłsudskiego 6 Łódź",
+    rodzaj: "placówka",
+    nazwa: "placówka Al. Piłsudskiego 6 Łódź",
     miasto: "Łódź",
     ulica: "Al. Piłsudskiego 6",
     kod_pocztowy: "90-051",
@@ -319,12 +319,12 @@ export const branches = [
     godziny_otwarcia: "9:00-19:00",
     tel: "505549242",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "nieruchomości"
   },
   {
     id: 23,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Żeligowskiego 8/10 Łódź",
+    rodzaj: "placówka",
+    nazwa: "placówka Żeligowskiego 8/10 Łódź",
     miasto: "Łódź",
     ulica: "Żeligowskiego 8/10",
     kod_pocztowy: "90-752",
@@ -333,12 +333,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 24,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Piłsudskiego 13 Lublin",
+    rodzaj: "placówka",
+    nazwa: "placówka Piłsudskiego 13 Lublin",
     miasto: "Lublin",
     ulica: "Piłsudskiego 13",
     kod_pocztowy: "20-011",
@@ -347,12 +347,12 @@ export const branches = [
     godziny_otwarcia: "09:00-18:00",
     tel: "573313337",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 25,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Jana Pawła II nr 17 Lublin",
+    rodzaj: "placówka",
+    nazwa: "placówka Jana Pawła II nr 17 Lublin",
     miasto: "Lublin",
     ulica: "Jana Pawła II nr 17",
     kod_pocztowy: "20-535",
@@ -361,12 +361,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505550625",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 26,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Kazimierza Wielkiego 116 Kraków",
+    rodzaj: "placówka",
+    nazwa: "placówka Kazimierza Wielkiego 116 Kraków",
     miasto: "Kraków",
     ulica: "Kazimierza Wielkiego 116",
     kod_pocztowy: "30-082",
@@ -376,12 +376,12 @@ export const branches = [
     tel: "505538451",
     fax: "",
     zakres:
-      "test, test, test, test, test, test, test, test, test, test, test, test, test, test, test, test"
+    "nieruchomości"
   },
   {
     id: 27,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Jasnogórska 9, Ip., klatka b Kraków",
+    rodzaj: "placówka",
+    nazwa: "placówka Jasnogórska 9, Ip., klatka b Kraków",
     miasto: "Kraków",
     ulica: "Jasnogórska 9, Ip., klatka b",
     kod_pocztowy: "31-358",
@@ -390,12 +390,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "12 290 10 21",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 28,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Karmelicka 64 Kraków",
+    rodzaj: "placówka",
+    nazwa: "placówka Karmelicka 64 Kraków",
     miasto: "Kraków",
     ulica: "Karmelicka 64",
     kod_pocztowy: "31-128",
@@ -404,12 +404,12 @@ export const branches = [
     godziny_otwarcia: "",
     tel: "",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 29,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Asnyka 11 Koszalin",
+    rodzaj: "placówka",
+    nazwa: "placówka Asnyka 11 Koszalin",
     miasto: "Koszalin",
     ulica: "Asnyka 11",
     kod_pocztowy: "75-003",
@@ -418,12 +418,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505-557-647",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "nieruchomości"
   },
   {
     id: 30,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk IX Wieków Kielc 2A, lok. 3 Kielce",
+    rodzaj: "placówka",
+    nazwa: "placówka IX Wieków Kielc 2A, lok. 3 Kielce",
     miasto: "Kielce",
     ulica: "IX Wieków Kielc 2A, lok. 3",
     kod_pocztowy: "25-516",
@@ -432,12 +432,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "(41) 343 10 82",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 31,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk 1 Maja 2 Katowice",
+    rodzaj: "placówka",
+    nazwa: "placówka 1 Maja 2 Katowice",
     miasto: "Katowice",
     ulica: "1 Maja 2",
     kod_pocztowy: "40-284",
@@ -446,12 +446,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "696147752",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 32,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Dolnych Wałów 9 Gliwice",
+    rodzaj: "placówka",
+    nazwa: "placówka Dolnych Wałów 9 Gliwice",
     miasto: "Gliwice",
     ulica: "Dolnych Wałów 9",
     kod_pocztowy: "44-100",
@@ -460,12 +460,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "(32) 332 90 08, (32) 233 72 20",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy"
   },
   {
     id: 33,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Dunikowskiego 10 Gliwice",
+    rodzaj: "placówka",
+    nazwa: "placówka Dunikowskiego 10 Gliwice",
     miasto: "Gliwice",
     ulica: "Dunikowskiego 10",
     kod_pocztowy: "44-100",
@@ -474,12 +474,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "(32) 279 30 56, 32 279 30 67",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 34,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Władysława IV 43, I p. pok. 110 Gdynia",
+    rodzaj: "placówka",
+    nazwa: "placówka Władysława IV 43, I p. pok. 110 Gdynia",
     miasto: "Gdynia",
     ulica: "Władysława IV 43, I p. pok. 110",
     kod_pocztowy: "81-623",
@@ -488,12 +488,12 @@ export const branches = [
     godziny_otwarcia: "9:30-16:30",
     tel: "506575345",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 35,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Starowiejska 26 Gdynia",
+    rodzaj: "placówka",
+    nazwa: "placówka Starowiejska 26 Gdynia",
     miasto: "Gdynia",
     ulica: "Starowiejska 26",
     kod_pocztowy: "81-356",
@@ -502,12 +502,12 @@ export const branches = [
     godziny_otwarcia: "10:00-19:00",
     tel: "(58) 660 43 50",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyty samochodowe"
   },
   {
     id: 36,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Al.Grunwaldzka 82 lokal 366 Gdańsk",
+    rodzaj: "placówka",
+    nazwa: "placówka Al.Grunwaldzka 82 lokal 366 Gdańsk",
     miasto: "Gdańsk",
     ulica: "Al.Grunwaldzka 82 lokal 366",
     kod_pocztowy: "80-244",
@@ -516,13 +516,13 @@ export const branches = [
     godziny_otwarcia: "9.30-17:00",
     tel: "(58) 305 48 78",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 37,
-    rodzaj: "mKiosk",
+    rodzaj: "placówka",
     nazwa:
-      "mKiosk Cypriana Kamila Norwida 2; piętro 1 (osiedle Garnizon) Gdańsk",
+      "placówka Cypriana Kamila Norwida 2; piętro 1 (osiedle Garnizon) Gdańsk",
     miasto: "Gdańsk",
     ulica: "Cypriana Kamila Norwida 2; piętro 1 (osiedle Garnizon)",
     kod_pocztowy: "80-280",
@@ -531,12 +531,12 @@ export const branches = [
     godziny_otwarcia: "09:00-17:00",
     tel: "505-549-596",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyty samochodowe"
   },
   {
     id: 38,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Sobieskiego 50 Częstochowa",
+    rodzaj: "placówka",
+    nazwa: "placówka Sobieskiego 50 Częstochowa",
     miasto: "Częstochowa",
     ulica: "Sobieskiego 50",
     kod_pocztowy: "42-217",
@@ -545,12 +545,12 @@ export const branches = [
     godziny_otwarcia: "10:00-18:00",
     tel: "(34) 310 44 54",
     fax: "",
-    zakres: "test, test, test, test, test, test, test, test"
+    zakres: "pożyczki"
   },
   {
     id: 39,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Kraszewskiego 1, wejście D, parter Bydgoszcz",
+    rodzaj: "placówka",
+    nazwa: "placówka Kraszewskiego 1, wejście D, parter Bydgoszcz",
     miasto: "Bydgoszcz",
     ulica: "Kraszewskiego 1, wejście D, parter",
     kod_pocztowy: "85-240",
@@ -559,12 +559,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505557679",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyt firmowy, kredyty samochodowe"
   },
   {
     id: 40,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Cechowa 15 Bielsko-Biała",
+    rodzaj: "placówka",
+    nazwa: "placówka Cechowa 15 Bielsko-Biała",
     miasto: "Bielsko-Biała",
     ulica: "Cechowa 15",
     kod_pocztowy: "43-300",
@@ -573,12 +573,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "(33) 813 75 86",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyty samochodowe"
   },
   {
     id: 41,
-    rodzaj: "mKiosk",
-    nazwa: "mKiosk Świętojańska 12A Białystok",
+    rodzaj: "placówka",
+    nazwa: "placówka Świętojańska 12A Białystok",
     miasto: "Białystok",
     ulica: "Świętojańska 12A",
     kod_pocztowy: "15-082",
@@ -587,12 +587,12 @@ export const branches = [
     godziny_otwarcia: "9:00-17:00",
     tel: "505548902",
     fax: "",
-    zakres: "test, test, test, test"
+    zakres: "kredyty"
   },
   {
     id: 42,
-    rodzaj: "mkiosk",
-    nazwa: "mKiosk Świętojańska 12A Białystok",
+    rodzaj: "placówka",
+    nazwa: "placówka Świętojańska 12A Białystok",
     miasto: "Białystok",
     ulica: "Świętojańska 12A ",
     kod_pocztowy: "15-082",
