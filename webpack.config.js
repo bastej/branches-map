@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: {
-    app: "./src/app.js"
-  },
+  entry: [
+    "babel-polyfill",
+     "./src/app.js"
+  ],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js"
