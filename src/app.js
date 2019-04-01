@@ -64,12 +64,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     
     //download PDF
-    // ################## nie pobierac z DOM info do pdf tylko po filtrwaniu wyrzucic tablice 
-    //                    z przeflitrowanymi placowkami do zmiennej i z niej ladowac do pdf dane
     function saveToPDF() {
         // lazyLoadScript("pdfmake/build/pdfmake.min.js", "pdfmake/build/vfs_fonts");
         // !pdfMake.vfs && (pdfMake.vfs = pdfFonts.pdfMake.vfs)
-    
           var pdfData = locationsToDisplay.map(element => {
             return {
               unbreakable: true,
@@ -90,28 +87,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
               }
             };
           })
-
-          // var test = [].map.call(divToPrint.children, function(element) {
-          //   var rodzaj = element.querySelector(".infoBox__rodzaj b")
-          //       ? element.querySelector(".infoBox__rodzaj b").textContent + "\n"
-          //       : "",
-          //     adres = element.querySelector(".infoBox__adres span")
-          //       ? element.querySelector(".infoBox__adres span").textContent + "\n"
-          //       : "",
-          //     otwarcie = element.querySelector(".infoBox__otwarcie span")
-          //       ? element.querySelector(".infoBox__otwarcie span").textContent + "\n"
-          //       : "",
-          //     tel_fax = element.querySelector(".infoBox__tel_fax span")
-          //       ? element.querySelector(".infoBox__tel_fax span").textContent + "\n"
-          //       : "",
-          //     zakres = element.querySelector(".infoBox__zakres span")
-          //       ? element.querySelector(".infoBox__zakres span").lastChild.lastChild
-          //           .textContent + "\n"
-          //       : "";
-      
-            
-          // });
-
         var docDefinition = {
           content: [
             {
@@ -222,189 +197,133 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
 
-    function showInDOM(locations, result, view, all) {
-      var fieldsContainer = document.querySelector(result);
-      var count = 0;
+    function showInDOM(locations, outputDiv, listView) {
+      var fieldsContainer = document.querySelector(outputDiv);
+      var count = 0;// zliczamy liczbe placowek
       for (let k in locations) if (locations.hasOwnProperty(k)) count++;
-    
-      $(result).animate(
+      // $("#btn-toggle-view").attr("data-active") ? (listView = true) : "";
+      $(outputDiv).animate(
         {
           opacity: 0
         },
         100,
-        function() {
-          var fields = document.createElement("div");
-          if (!view) {
-            $("#btn-toggle-view").attr("data-active", "false");
-            //layout listy nr 1
-            locations.map(function(element) {
-              var field = document.createElement("div");
-              field.className = "placowki-list__wrapper__field col-md-4 col4";
-              var tooltip =
-                "<div>" +
-                "<b>" +
-                "Zakres usług" +
-                ":" +
-                "<p>" +
-                element.zakres +
-                "</p>" +
-                "</div>";
-    
-              var rodzaj = element.rodzaj ? element.rodzaj : "&nbsp";
-              var godziny = element.godziny_otwarcia
-                ? '<tr class="infoBox__otwarcie">' +
-                  '<td><img class="infoBox__icon" src="./' +
-                  clock +
-                  '" /></td>' +
-                  "<td><span>" +
-                  element.godziny_otwarcia +
-                  "</b></span></td>" +
-                  "</tr>"
-                : "";
-              var fax = element.fax ? " fax.: <b>" + element.fax + "</b>" : "";
-              var tel =
-                element.tel || element.fax
-                  ? '<tr class="infoBox__tel_fax"><td><img class="infoBox__icon" src="./' +
-                    phone +
-                    '" /></td><td><span>tel.: <b>' +
-                    element.tel +
-                    "</b>" +
-                    fax +
-                    "</span></td></tr>"
-                  : "";
-    
-              field.innerHTML =
-                '<div data-id="' +
-                element.id +
-                '" class="infoBox" data-toggle="tooltip" data-placement="left" data-html="true" title="' +
-                tooltip +
-                '"><table>' +
-                '<tr class="infoBox__nazwa"><td></td><td><span><b>' +
-                rodzaj +
-                "</b></span></td></tr>" +
-                '<tr class="infoBox__adres"><td><img class="infoBox__icon" src="./' +
-                locationIc +
-                '" /></td><td><span><b>' +
-                element.ulica +
-                "</b>, " +
-                element.kod_pocztowy +
-                " " +
-                element.miasto +
-                "</span></td></tr>" +
-                godziny +
-                tel +
-                '<tr class="infoBox__zakres"><td><img class="infoBox__icon" src="./' +
-                info +
-                '" /></td><td><span><b>' +
-                "Zakres usług" +
-                ' <span class="hide-in-DOM">' +
-                element.zakres +
-                "</span></b></span></td></tr>" +
-                "</table></div>";
-              fields.appendChild(field);
-            });
-    
-            setTimeout(function() {
-              fieldsContainer.innerHTML = "";
-              fieldsContainer.innerHTML = fields.innerHTML;
+        showItems()
+      );
+
+      function showItems() {
+        // alert("tryb: " + listView)
+        var fields = document.createElement("div");
+
+          // $("#btn-toggle-view").attr("data-active", "false");// po wyszukiwaiu domyslny uklad
+          locations.map(function(element, index) {
+            var field = document.createElement("div");
+            var {id, nazwa, rodzaj, godziny_otwarcia, tel, fax, ulica, kod_pocztowy, miasto, zakres} = element;
+
+            !listView ? field.className = "placowki-list__wrapper__field col-md-4 col4" 
+                      : field.className = "placowki-list__wrapper__field col-12 card";
+            var tooltip =
+              `<div>
+                <b>Zakres usług:</b>
+                <p>${zakres}</p>
+              </div>`;
+  
+            field.innerHTML =
+              `${!listView 
+                ? `<div data-id="${id}" class="infoBox" data-toggle="tooltip" data-placement="left" data-html="true" title="${tooltip}">`
+                : `<div class="card-header" id="h${index}">
+                      <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#c${index}" aria-expanded="false" aria-controls="c${index}">
+                      <h5>
+                        <img class="infoBox__logoImg" src="./${miniLogo}" />
+                        ${nazwa}
+                      </h5>
+                    </a>
+                    </div>
+                    <div id="c${index}" class="collapse" aria-labelledby="h${index}" data-parent="#accordionExample">
+                      <div class="card-body">`
+              } 
+                <table>
+                  <tr class="infoBox__nazwa">
+                    <td></td>
+                    <td>
+                      <span>
+                        <b>${rodzaj || "&nbsp"}</b>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="infoBox__adres">
+                    <td>
+                      <img class="infoBox__icon" src="./${locationIc}"/>
+                    </td>
+                    <td>
+                      <span>
+                        <b>${ulica}</b>, ${kod_pocztowy} ${miasto}
+                      </span>
+                    </td>
+                  </tr>
+                  ${godziny_otwarcia && `
+                  <tr class="infoBox__otwarcie">
+                    <td>
+                      <img class="infoBox__icon" src="./${clock}" />
+                    </td>
+                    <td>
+                      <span>
+                        ${godziny_otwarcia}
+                      </span>
+                    </td>
+                  </tr>
+                  `} 
+                  ${tel || fax ? `
+                  <tr class="infoBox__tel_fax">
+                    <td>
+                      <img class="infoBox__icon" src="./${phone}" />
+                    </td>
+                    <td>
+                      <span>
+                        tel.: <b>${tel}</b> ${fax && `fax.:<b>${fax}</b>`}
+                      </span>
+                    </td>
+                  </tr>
+                  ` : ""}
+                  <tr class="infoBox__zakres">
+                    <td>
+                      <img class="infoBox__icon" src="./${info}"/>
+                    </td>
+                    <td>
+                      <span>
+                        <b>Zakres usług
+                          <span class="hide-in-DOM">
+                            ${zakres}
+                          </span>
+                        </b>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              ${!listView 
+                ? `</div>`
+                : `</div>
+                </div>`} 
+              `;
+            fields.appendChild(field);
+          });
+
+          setTimeout(function() {
+            fieldsContainer.innerHTML = "";
+            if(!listView){
+              fieldsContainer.innerHTML = fields.innerHTML
               $('[data-toggle="tooltip"]').tooltip({ html: true })
-              $(result).css("opacity", "1");
-              $("#itemOutputHeader").html("Lista oddziałów" + "(" + count + "):");
-              if (count === 0) {
-                $("#datafetch").html("<h4>Brak wyników wyszukiwania</h4>");
-              }
-            }, 300);
-          } else {
-            //layout listy nr2
-            locations.map(function(element, index) {
-              var field = document.createElement("div");
-              field.className = "placowki-list__wrapper__field col-12 card";
-    
-              var rodzaj = element.rodzaj ? element.rodzaj : "&nbsp";
-              var godziny = element.godziny_otwarcia
-                ? '<tr class="infoBox__otwarcie">' +
-                  '<td><img class="infoBox__icon" src="./' +
-                  clock +
-                  '" /></td>' +
-                  "<td><span>" +
-                  element.godziny_otwarcia +
-                  "</b></span></td>" +
-                  "</tr>"
-                : "";
-              var fax = element.fax ? " fax.: <b>" + element.fax + "</b>" : "";
-              var tel =
-                element.tel || element.fax
-                  ? '<tr class="infoBox__tel_fax"><td><img class="infoBox__icon" src="./' +
-                    phone +
-                    '" /></td><td><span>tel.: <b>' +
-                    element.tel +
-                    "</b>" +
-                    fax +
-                    "</span></td></tr>"
-                  : "";
-    
-              field.innerHTML =
-                '<div class="card-header" id="h' +
-                index +
-                '">' +
-                '<a class="btn btn-link collapsed" data-toggle="collapse" data-target="#c' +
-                index +
-                '" aria-expanded="false" aria-controls="c' +
-                index +
-                '">' +
-                '<h5><img class="infoBox__logoImg" src="./' +
-                miniLogo +
-                '" />' +
-                element.nazwa +
-                "</h5>" +
-                "</a>" +
-                "</div>" +
-                '<div id="c' +
-                index +
-                '" class="collapse" aria-labelledby="h' +
-                index +
-                '" data-parent="#accordionExample"><div class="card-body">' +
-                '<div class="infoBox"><table>' +
-                '<tr class="infoBox__rodzaj"><td></td><td><span><b>' +
-                rodzaj +
-                "</b></span></td></tr>" +
-                '<tr class="infoBox__adres"><td><img class="infoBox__icon" src="./' +
-                locationIc +
-                '" /></td><td><span><b>' +
-                element.ulica +
-                "</b>, " +
-                element.kod_pocztowy +
-                " " +
-                element.miasto +
-                "</span></td></tr>" +
-                godziny +
-                tel +
-                '<tr class="infoBox__zakres"><td><img class="infoBox__icon" src="./' +
-                info +
-                '" /></td><td><span><b>' +
-                "Zakres usług" +
-                "<b>: </b>" +
-                element.zakres +
-                "</span></td></tr>" +
-                "</div>" +
-                "</table>" +
-                "</div></div>";
-              fields.appendChild(field);
-            });
-            setTimeout(function() {
-              fieldsContainer.innerHTML = "";
-              fieldsContainer.innerHTML =
-                '<div class="accordion col-12" id="accordionExample">' +
-                fields.innerHTML +
-                "</div>";
-              $(result).animate({ opacity: 1 }, 300, function() {
+              $(outputDiv).css("opacity", "1");
+            } else {
+              fieldsContainer.innerHTML = `<div class="accordion col-12" id="accordionExample">${fields.innerHTML}</div>`;
+              $(outputDiv).animate({ opacity: 1 }, 300, function() {
                 $(".tooltip").css("display", "none");
               });
-              $("#itemOutputHeader").html("Lista oddziałów" + "(" + count + "):");
-            }, 300);
-          }
-        }
-      );
+            }
+            $("#itemOutputHeader").html(`Lista oddziałów (${count}):`);
+            count === 0 && $("#datafetch").html("<h4>Brak wyników wyszukiwania</h4>");
+          }, 300)
+      }
+
     }
     
     function calculateDistance(startPoint, allLocation, range) {
@@ -594,7 +513,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var markerCluster = new MarkerClusterer(map, markersTest, config);
       }
       controller === "autoInit"
-        ? showInDOM(locationsArray, "#datafetch", false, true)
+        ? showInDOM(locationsArray, "#datafetch")
         : "";
     }
     
