@@ -1,4 +1,4 @@
-import "./css/style.scss";
+require("./css/style.scss");
 // import "./style.css";
 
 
@@ -8,22 +8,22 @@ import MarkerClusterer from "@google/markerclusterer";
 // import "bootstrap/js/dist/tooltip.js";
 // import _ from "lodash";
 
-import pdfMake from "pdfmake/build/pdfmake.min.js";
-import pdfFonts from "pdfmake/build/vfs_fonts";
-pdfMake.vfs = pdfFonts.pdfMake.vfs
+// import pdfMake from "pdfmake/build/pdfmake.min.js";
+// import pdfFonts from "pdfmake/build/vfs_fonts";
+// pdfMake.vfs = pdfFonts.pdfMake.vfs
 
-import { branches } from "./js/branches.js";
+import { branches } from "./js/branches.js";//przerobić na service
 // import lazyLoadScript from "./js/lazyLoader.js";
 
-import "./favicon.ico"
-import clock from "./img/icon_clock.png";
-import info from "./img/icon_info.png";
-import locationIc from "./img/icon_location.png";
-import phone from "./img/icon_phone.png";
-import m1 from "./img/m1.png";
-import marker from "./img/custom_marker.png";
-import markerGreen from "./img/custom_marker_green.png";
-import miniLogo from "./img/minilogo.png";
+require("./favicon.ico");
+let clock = require("./img/icon_clock.png");
+let info = require("./img/icon_info.png");
+let locationIc = require("./img/icon_location.png");
+let phone = require("./img/icon_phone.png");
+let m1 = require("./img/m1.png");
+let marker = require("./img/custom_marker.png");
+let markerGreen = require("./img/custom_marker_green.png");
+let miniLogo = require("./img/minilogo.png");
 import loadScript from "./js/lazyLoader.js";
 
 document.addEventListener("DOMContentLoaded", function(event) {

@@ -1,11 +1,12 @@
 var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: [
     "babel-polyfill",
-     "./src/app.js"
+     "./src/app.js",
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -43,6 +44,7 @@ module.exports = {
           {
             loader: "style-loader" // inject CSS to page
           },
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader" // translates CSS into CommonJS modules
           },
@@ -51,7 +53,7 @@ module.exports = {
             options: {
               plugins: function() {
                 // post css plugins, can be exported to postcss.config.js
-                return [require("precss"), require("autoprefixer")];
+                return [require("precss"), require("autoprefixer"), require("cssnano")];
               }
             }
           },
@@ -60,17 +62,29 @@ module.exports = {
           }
         ]
       }
+      // {
+      //   test: /\.scss$/,
+      //   use: [
+      //     "style-loader",
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader",
+      //     "sass-loader"
+      //   ]
+      // }
     ]
   },
   optimization: {
-    minimize: false
+    minimize: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "src/index.html"
+      template: "./src/index.html"
     }),
-    new CleanWebpackPlugin(["dist"])
+    new CleanWebpackPlugin(["dist"]),
     // new webpack.HotModuleReplacementPlugin()
+    new MiniCssExtractPlugin({
+      filename: "style.css"
+    }),
   ]
 };
